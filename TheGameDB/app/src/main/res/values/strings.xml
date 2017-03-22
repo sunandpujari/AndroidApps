@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">The Game DB</string>
+    <string name="search">Search</string>
+    <string name="go">go</string>
+    <string name="base_url">http://thegamesdb.net</string>
+    <string name="getgames_url">/api/GetGamesList.php?name=</string>
+    <string name="overview">Overview:</string>
+    <string name="play_trailer">Play Trailer</string>
+    <string name="similar_games">Similar Games</string>
+    <string name="finish">Finish</string>
+    <string name="game_details">Game Details</string>
+    <string name="web_view">WebView</string>
+</resources>
+

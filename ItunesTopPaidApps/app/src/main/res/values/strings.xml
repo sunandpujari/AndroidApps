@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Itunes Top Paid Apps</string>
+    <string name="refresh_list">Refresh list</string>
+    <string name="favorite">favorite</string>
+    <string name="sort_increasingly">Sort increasingly</string>
+    <string name="sort_decreasingly">Sort decreasingly</string>
+    <string name="app_favorites">app_favorites</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="finish">Finish</string>
+</resources>

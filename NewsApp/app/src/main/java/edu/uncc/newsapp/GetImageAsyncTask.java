@@ -1,0 +1,58 @@
+package edu.uncc.newsapp;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+
+/**
+ * Created by Hello on 2/6/2017.
+ */
+
+public class GetImageAsyncTask extends AsyncTask<String, Void, Bitmap> {
+    IImage activity;
+
+    public GetImageAsyncTask(IImage activity) {
+        this.activity = activity;
+    }
+
+    @Override
+    protected Bitmap doInBackground(String... params) {
+
+        InputStream in;
+        try {
+            URL url = new URL(params[0]);
+            //URL is passed through params
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            in = con.getInputStream();
+
+            Bitmap image = BitmapFactory.decodeStream(in);
+            return image;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Bitmap result) {
+        activity.setupImage(result);
+        super.onPostExecute(result);
+
+    }
+
+
+    static public interface IImage{
+        public void setupImage(Bitmap result);
+    }
+}

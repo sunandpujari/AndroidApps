@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.uncc.passwordgenerator.MainActivity">
+
+    <TextView
+        android:text="@string/for_threads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/tvThreads" />
+
+    <TextView
+        android:text="@string/select_password_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvThreads"
+        android:layout_alignLeft="@+id/tvThreads"
+        android:layout_alignStart="@+id/tvThreads"
+        android:layout_marginTop="18dp"
+        android:id="@+id/tvThreadPasswordCount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvThreadPasswordCount"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="57dp"
+        android:layout_marginEnd="57dp"
+        android:id="@+id/tvThreadPasswordCountSelected" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvThreadPasswordCount"
+        android:layout_alignLeft="@+id/tvThreadPasswordCount"
+        android:layout_alignStart="@+id/tvThreadPasswordCount"
+        android:layout_marginTop="12dp"
+        android:id="@+id/sbThreadPasswordCount" />
+
+    <TextView
+        android:text="@string/select_password_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbThreadPasswordCount"
+        android:layout_alignLeft="@+id/sbThreadPasswordCount"
+        android:layout_alignStart="@+id/sbThreadPasswordCount"
+        android:layout_marginTop="11dp"
+        android:id="@+id/tvThreadPasswordLength" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvThreadPasswordLength"
+        android:layout_alignLeft="@+id/tvThreadPasswordCountSelected"
+        android:layout_alignStart="@+id/tvThreadPasswordCountSelected"
+        android:id="@+id/tvThreadPawordLengthSelected" />
+
+    <TextView
+        android:text="@string/for_async_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvThreadPasswordLength"
+        android:layout_alignLeft="@+id/tvThreadPasswordLength"
+        android:layout_alignStart="@+id/tvThreadPasswordLength"
+        android:layout_marginTop="65dp"
+        android:id="@+id/tvAsyncTask" />
+
+    <TextView
+        android:text="@string/select_password_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAsyncTask"
+        android:layout_alignLeft="@+id/tvAsyncTask"
+        android:layout_alignStart="@+id/tvAsyncTask"
+        android:layout_marginTop="21dp"
+        android:id="@+id/tvAsyncPasswordCount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvAsyncPasswordCount"
+        android:layout_alignLeft="@+id/tvThreadPawordLengthSelected"
+        android:layout_alignStart="@+id/tvThreadPawordLengthSelected"
+        android:id="@+id/tvAsyncPasswordCountSelected" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAsyncPasswordCount"
+        android:layout_alignLeft="@+id/tvAsyncPasswordCount"
+        android:layout_alignStart="@+id/tvAsyncPasswordCount"
+        android:layout_marginTop="20dp"
+        android:id="@+id/sbAsyncPasswordCount" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvThreadPasswordLength"
+        android:layout_alignLeft="@+id/tvThreadPasswordLength"
+        android:layout_alignStart="@+id/tvThreadPasswordLength"
+        android:layout_marginTop="15dp"
+        android:id="@+id/sbThreadPasswordLength" />
+
+    <TextView
+        android:text="@string/select_password_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbAsyncPasswordCount"
+        android:layout_alignLeft="@+id/sbAsyncPasswordCount"
+        android:layout_alignStart="@+id/sbAsyncPasswordCount"
+        android:layout_marginTop="14dp"
+        android:id="@+id/tvAsyncPasswordLength" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvAsyncPasswordLength"
+        android:layout_alignLeft="@+id/tvAsyncPasswordCountSelected"
+        android:layout_alignStart="@+id/tvAsyncPasswordCountSelected"
+        android:id="@+id/tvAsyncPaswwordLengthSelected" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAsyncPasswordLength"
+        android:layout_alignLeft="@+id/tvAsyncPasswordLength"
+        android:layout_alignStart="@+id/tvAsyncPasswordLength"
+        android:layout_marginTop="16dp"
+        android:id="@+id/sbAsyncPasswordLength" />
+
+    <Button
+        android:text="@string/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tvThreads"
+        android:layout_toEndOf="@+id/tvThreads"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/btnGenerate" />
+
+</RelativeLayout>
